@@ -13,7 +13,7 @@ import {
   ZeroDevSmartWalletConnectors,
 } from "@/lib/dynamic";
 
-import { AvocadoProvider, useAvocado } from "@/services/avocadoProvider";
+import { AvocadoProvider } from "@/services/lazyAvocadoProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,7 +27,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // const { setConnected } = useAvocado();
   return (
     <html lang="en">
       <body className={inter.className}>
